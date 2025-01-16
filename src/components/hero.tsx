@@ -1,12 +1,12 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import { motion } from 'framer-motion'
 
 export function Hero() {
   const [displayText, setDisplayText] = useState('Creating.')
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
-  const words = ['Creating.', 'Building.', 'Driving.', 'Leading.', 'Inspiring.', 'Creating.']
+  const words = useMemo(() => ['Creating.', 'Building.', 'Driving.', 'Leading.', 'Inspiring.', 'Creating.'], []);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -31,7 +31,7 @@ export function Hero() {
     }, 5500)
 
     return () => clearTimeout(initialDelay)
-  }, [])
+  }, [words])
 
   return (
     <div className="relative h-screen flex items-center justify-center gradient-bg">
@@ -52,9 +52,9 @@ export function Hero() {
             Social Impact
           </span>
         </h1>
-        <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto mt-6">
-          社会課題の"図星"を突こう。
-        </p>
+        <div className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto mt-6">
+        {'社会課題の"図星"を突こう。'}
+        </div>
       </motion.div>
       <div
         className="fixed inset-0 pointer-events-none opacity-40"
