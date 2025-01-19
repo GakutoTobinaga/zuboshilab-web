@@ -11,7 +11,7 @@ export function Partners() {
   return (
     <div className="container mx-auto px-4 py-20">
       <h2 className="text-4xl font-bold text-foreground mb-12 text-center">
-        Partners.
+        zl. Partners.
       </h2>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
         {partners.map((partner, index) => (

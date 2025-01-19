@@ -7,7 +7,7 @@ export function Footer() {
             <div className="text-2xl font-bold text-foreground mb-4">
               zuboshi lab.
             </div>
-            <p className="text-muted-foreground">テクノロジーで社会をより良く</p>
+            <p className="text-muted-foreground">社会課題の「図星」を突こう。</p>
           </div>
           <div>
             <h3 className="text-foreground font-bold mb-4">所在地</h3>
@@ -27,7 +27,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-border text-center text-muted-foreground">
-          <p>© 2025 Zuboshi Lab. All rights reserved.</p>
+          <p>© 2025 zuboshi lab. All rights reserved.</p>
         </div>
       </div>
     </footer>

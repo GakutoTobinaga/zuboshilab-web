@@ -49,7 +49,7 @@ export function Hero() {
             </span>
           </div>
           <span className="text-transparent bg-clip-text animate-gradient mt-2 inline-block">
-            Social Impact
+            Social Impacts.
           </span>
         </h1>
         <div className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto mt-6">
