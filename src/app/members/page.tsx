@@ -8,7 +8,7 @@ const members: Member[] = [
     role: "エンジニア",
     comment:
       "やあ",
-    imageUrl: "/placeholder.svg?height=400&width=400",
+    imageUrl: "/profile/Gakuto.png",
     socialLinks: {
       twitter: "https://twitter.com/yamada_taro",
       github: "https://github.com/yamada-taro",
@@ -16,11 +16,11 @@ const members: Member[] = [
   },
   {
     id: "2",
-    name: "佐藤花子",
-    role: "UIデザイナー",
+    name: "Yobe",
+    role: "動画編集者/マーケティング",
     comment:
-      "美しさと使いやすさを両立したデザインを追求しています。ユーザーの心理を深く理解し、直感的で魅力的なインターフェースを作ることが私の使命です。デザインシステムの構築やアクセシビリティの向上にも力を入れており、誰もが使いやすいプロダクトづくりを目指しています。",
-    imageUrl: "/placeholder.svg?height=400&width=400",
+      "ういっす",
+    imageUrl: "/profile/Oyobe.png",
     socialLinks: {
       twitter: "https://twitter.com/sato_hanako",
       linkedin: "https://linkedin.com/in/sato-hanako",
@@ -30,7 +30,7 @@ const members: Member[] = [
 
 export default function MembersPage() {
   return (
-    <div className="container mx-auto py-12">
+    <div className="container mx-auto py-12 bg-orange-200">
       <h1 className="text-4xl font-bold text-center mb-16">zl. Members.</h1>
       {members.map((member) => (
         <MemberProfile key={member.id} member={member} />
