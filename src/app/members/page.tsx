@@ -30,8 +30,8 @@ const members: Member[] = [
 
 export default function MembersPage() {
   return (
-    <div className="container mx-auto py-12 bg-orange-200">
-      <h1 className="text-4xl font-bold text-center mb-16">zl. Members.</h1>
+    <div className="container mx-auto py-12 bg-orange-100">
+      <h1 className="text-4xl font-bold text-center mb-16 text-black dark:text-black">zl. Members.</h1>
       {members.map((member) => (
         <MemberProfile key={member.id} member={member} />
       ))}
