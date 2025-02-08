@@ -26,22 +26,6 @@ export function MemberProfile({ member }: { member: Member }) {
             </a>
           </Button>
         )}
-        {member.socialLinks.github && (
-          <Button variant="outline" size="icon" asChild>
-            <a href={member.socialLinks.github} target="_blank" rel="noopener noreferrer">
-              <Github className="h-5 w-5" />
-              <span className="sr-only">GitHub</span>
-            </a>
-          </Button>
-        )}
-        {member.socialLinks.linkedin && (
-          <Button variant="outline" size="icon" asChild>
-            <a href={member.socialLinks.linkedin} target="_blank" rel="noopener noreferrer">
-              <Linkedin className="h-5 w-5" />
-              <span className="sr-only">LinkedIn</span>
-            </a>
-          </Button>
-        )}
       </div>
     </div>
   )
