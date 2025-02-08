@@ -2,7 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 
 const products = [
   { name: 'IndieGamePicks', description: '開発中のプロジェクト', icon: '🎮' },
-  { name: 'Coming Soon...', description: '開発中のプロジェクト', icon: '📝' },
+  { name: 'noizlab', description: '開発中のプロジェクト', icon: '📝' },
   { name: 'Coming Soon...', description: '開発中のプロジェクト', icon: '👨‍💼' },
 ]
 
