@@ -109,16 +109,3 @@
   );
 }
 
-.word-transition-container span {
-  opacity: 0;
-  animation: fadeInOut 5.5s ease-in-out infinite;
-}
-
-@keyframes fadeInOut {
-  0% { opacity: 0; }
-  12.7% { opacity: 1; }
-  85.5% { opacity: 1; }
-  98.2% { opacity: 0; }
-  100% { opacity: 0; }
-}
-

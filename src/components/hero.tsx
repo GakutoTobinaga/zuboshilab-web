@@ -1,12 +1,12 @@
 'use client'
 
 import { useState, useEffect, useMemo } from 'react'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 
 export function Hero() {
-  const [displayText, setDisplayText] = useState('Creating.')
+  const [currentIndex, setCurrentIndex] = useState(0)
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
-  const words = useMemo(() => ['Creating.', 'Building.', 'Driving.', 'Leading.', 'Inspiring.', 'Creating.'], []);
+  const words = useMemo(() => ['Creating.', 'Building.', 'Driving.', 'Leading.', 'Inspiring.'], []);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -18,20 +18,12 @@ export function Hero() {
   }, [])
 
   useEffect(() => {
-    let currentIndex = 0
-    const animateText = () => {
-      currentIndex = (currentIndex + 1) % words.length
-      setDisplayText(words[currentIndex])
-    }
+    const intervalId = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % words.length)
+    }, 3000) // 3秒間隔に短縮
 
-    const initialDelay = setTimeout(() => {
-      animateText()
-      const intervalId = setInterval(animateText, 5500)
-      return () => clearInterval(intervalId)
-    }, 5500)
-
-    return () => clearTimeout(initialDelay)
-  }, [words])
+    return () => clearInterval(intervalId)
+  }, [words.length])
 
   return (
     <div className="relative h-screen flex items-center justify-center gradient-bg">
@@ -44,9 +36,18 @@ export function Hero() {
       >
         <h1 className="text-6xl md:text-8xl font-bold text-foreground">
           <div className="word-transition-container mb-4">
-            <span className="inline-block w-[280px] md:w-[500px] text-center">
-              {displayText}
-            </span>
+            <AnimatePresence mode="wait">
+              <motion.span
+                key={currentIndex}
+                className="inline-block w-[280px] md:w-[500px] text-center"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.5, ease: "easeInOut" }}
+              >
+                {words[currentIndex]}
+              </motion.span>
+            </AnimatePresence>
           </div>
           <span className="text-transparent bg-clip-text animate-gradient mt-2 inline-block">
             Social Impacts.
