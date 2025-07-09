@@ -20,7 +20,7 @@ export function Footer() {
           <div>
             <h3 className="text-foreground font-bold mb-4">お問い合わせ</h3>
             <p className="text-muted-foreground">
-              Email: contact@zuboshilab.com
+              Email: info@zuboshilab.com
               <br />
               Tel: 03-XXXX-XXXX
             </p>

@@ -9,7 +9,7 @@ export default function ContactZl() {
       </p>
       <div className="space-y-2">
         <p className="text-gray-700">
-          <span className="font-semibold">Email:</span> info@zl.com
+          <span className="font-semibold">Email:</span> info@zuboshilab.com
         </p>
         <p className="text-gray-700">
           <span className="font-semibold">電話:</span> 03-1234-5678
